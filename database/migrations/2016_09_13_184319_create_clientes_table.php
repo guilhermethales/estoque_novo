@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use App\Cliente;
 
 class CreateClientesTable extends Migration
 {
@@ -21,6 +22,8 @@ class CreateClientesTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+
+        factory(Cliente::class)->create();
     }
 
     /**
